@@ -40,7 +40,7 @@ class PostApiService(private val client: HttpClient) {
                 val response: MoviesResponse = client.get("https://api.themoviedb.org/3/search/movie") {
                     parameter("api_key", "25a106ac989fe8bfda1dfa5c92602aa4")
                     parameter("query", query)
-                    parameter("page", page) // 👈 هنا ضيف الـ page
+                    parameter("page", page)
                 }.body()
 
                 println("Search for \"$query\" got: ${response.results.size} results (page $page)")

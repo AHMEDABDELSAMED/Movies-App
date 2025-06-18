@@ -31,10 +31,7 @@ fun HomeScreen(
     val postsFlow = lastSearch ?: viewModel.lastFeed
     val posts = postsFlow.collectAsLazyPagingItems()
     val listState = rememberLazyListState()
-    // first loading movies
-    LaunchedEffect(Unit) {
-       // viewModel.getPosts()
-    }
+  
     Column(
         modifier = Modifier
             .fillMaxSize()

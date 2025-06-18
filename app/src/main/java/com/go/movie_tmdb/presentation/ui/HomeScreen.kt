@@ -71,7 +71,7 @@ fun HomeScreen(
                 }
             }
 
-            // if paging is loading data for the first time (refresh) or loading additional pages (append)
+            // if paging is loading data for the first time or loading additional pages (append)
             posts.apply {
                 when {
                     loadState.refresh is LoadState.Loading -> {

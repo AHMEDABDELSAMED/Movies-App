@@ -28,7 +28,7 @@ fun HomeScreen(
 ) {
     val searchQuery by viewModel.searchQuery.collectAsState()
     val lastSearch by viewModel.lastSearch.collectAsState()
-    val postsFlow = lastSearch ?: viewModel.lastFeed
+    val postsFlow = lastSearch ?: viewModel.lastMovie
     val posts = postsFlow.collectAsLazyPagingItems()
     val listState = rememberLazyListState()
   

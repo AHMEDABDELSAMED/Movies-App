@@ -25,7 +25,7 @@ class PostViewModel(
 ) : ViewModel() {
 
     // Save the FlowSave
-    val lastFeed: Flow<PagingData<Post>> = getPostsUseCase.getPostsFlow().cachedIn(viewModelScope)
+    val lastMovie: Flow<PagingData<Post>> = getPostsUseCase.getPostsFlow().cachedIn(viewModelScope)
 
     val searchQuery = MutableStateFlow("")
     private val _lastSearch = MutableStateFlow<Flow<PagingData<Post>>?>(null)

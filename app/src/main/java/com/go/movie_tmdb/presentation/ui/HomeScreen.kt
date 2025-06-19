@@ -31,7 +31,6 @@ fun HomeScreen(
     val postsFlow = lastSearch ?: viewModel.lastMovie
     val posts = postsFlow.collectAsLazyPagingItems()
     val listState = rememberLazyListState()
-  
     Column(
         modifier = Modifier
             .fillMaxSize()
